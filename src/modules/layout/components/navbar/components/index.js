@@ -25,26 +25,13 @@ const NavbarComponent = () => {
 						<span className="ms-2 fs-4 d-none d-sm-block fw-bolder">{process.env.SITE_NAME}</span>
 					</CustomLinkComponent>
 					<ul className="nav d-none d-md-flex ms-3">
-						<li className="nav-item">
-							<a href="#!" className="nav-link link-dark px-2">
-								Home
-							</a>
-						</li>
-						<li className="nav-item">
-							<a href="#!" className="nav-link link-dark px-2">
-								Contact
-							</a>
-						</li>
-						<li className="nav-item">
-							<a href="#!" className="nav-link link-dark px-2">
-								FAQs
-							</a>
-						</li>
-						<li className="nav-item">
-							<a href="#!" className="nav-link link-dark px-2">
-								About
-							</a>
-						</li>
+						{process.env.NAVBAR_MENU?.map((item, index) => (
+							<li className="nav-item" key={index}>
+								<CustomLinkComponent href={item.href} className="nav-link link-dark px-2">
+									{item.name}
+								</CustomLinkComponent>
+							</li>
+						))}
 					</ul>
 					<form className="d-none d-md-flex align-items-center border rounded-pill px-3 ms-auto">
 						<BsSearch />
