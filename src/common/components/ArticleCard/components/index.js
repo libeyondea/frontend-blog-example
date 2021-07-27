@@ -24,7 +24,7 @@ const ArticleCardComponent = ({
 		<div className="card border overflow-hidden position-relative rounded-0 border-0">
 			<div className="row g-0">
 				<div className={`${isVertical ? 'col-12' : 'col-3'}`}>
-					<CustomImageComponent className="rounded-3" src={coverImage} width={666} height={444} alt="Post" />
+					<CustomImageComponent className="rounded-3" src={coverImage} width={666} height={444} alt={title} />
 				</div>
 				<div className={`${isVertical ? 'col-12' : 'col-9 ps-3'}`}>
 					<div className="card-body position-static p-0">
