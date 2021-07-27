@@ -26,7 +26,7 @@ const ArticleCardComponent = ({
 				<div className={`${isVertical ? 'col-12' : 'col-3'}`}>
 					<CustomImageComponent className="rounded-3" src={coverImage} width={666} height={444} alt={title} />
 				</div>
-				<div className={`${isVertical ? 'col-12' : 'col-9 ps-3'}`}>
+				<div className={`${isVertical ? 'col-12' : 'col-9 ps-2 ps-sm-3'}`}>
 					<div className="card-body position-static p-0">
 						<div className="d-flex align-items-center mb-3">
 							<div className="me-1">
