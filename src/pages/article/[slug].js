@@ -91,7 +91,7 @@ const ArticleComponent = ({ article, articlesRelated }) => {
 													</span>
 												</div>
 											</div>
-											<div className="my-5">{article.data.content}</div>
+											<div className="my-3 my-sm-5">{article.data.content}</div>
 											<div className="d-flex justify-content-end align-items-center">
 												<div className="me-auto">
 													<span className="me-1">Tags:</span>
