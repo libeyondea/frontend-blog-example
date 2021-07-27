@@ -26,7 +26,7 @@ const ResponsiveMenuComponent = ({ showResMenu, setShowResMenu }) => {
 							src={process.env.LOGO_URL}
 							width={40}
 							height={40}
-							alt="Logo"
+							alt={process.env.SITE_NAME}
 							layout="fixed"
 						/>
 						<span className="ms-2 fs-4 fw-bolder">{process.env.SITE_NAME}</span>
@@ -72,12 +72,11 @@ const ResponsiveMenuComponent = ({ showResMenu, setShowResMenu }) => {
 						</CustomToggleComponent>
 						<Accordion.Collapse eventKey="1">
 							<>
-								<CustomLinkComponent href="/" className="dropdown-item p-2 ps-3">
-									More 1
-								</CustomLinkComponent>
-								<CustomLinkComponent href="/" className="dropdown-item p-2 ps-3">
-									More 2
-								</CustomLinkComponent>
+								{process.env.NAVBAR_MENU?.map((item, index) => (
+									<CustomLinkComponent href={item.href} className="dropdown-item p-2 ps-3" key={index}>
+										{item.name}
+									</CustomLinkComponent>
+								))}
 							</>
 						</Accordion.Collapse>
 					</li>
