@@ -1,6 +1,8 @@
+import moment from 'moment';
 import React from 'react';
 
 import CustomImage from '@/common/components/CustomImage/components';
+import CustomLinkComponent from '@/common/components/CustomLink/components';
 
 const FooterComponent = () => {
 	return (
@@ -15,40 +17,51 @@ const FooterComponent = () => {
 							height={66}
 							alt={process.env.SITE_NAME}
 						/>
-						<small className="d-block text-light">Copyright © Your Website 2020</small>
+						<small className="d-block text-light">
+							Copyright &copy; {moment().year()}
+							<CustomLinkComponent
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://twitter.com/de4th_zone"
+								className="text-decoration-none"
+							>
+								{' '}
+								De4th Zone
+							</CustomLinkComponent>
+						</small>
 					</div>
 					<div className="col-6 col-md-3 mb-4">
 						<h5 className="text-white">Features</h5>
 						<ul className="list-unstyled text-small mb-0">
 							<li>
-								<a className="text-secondary text-decoration-none" href="/">
+								<CustomLinkComponent href="/" className="text-secondary text-decoration-none">
 									Cool stuff
-								</a>
+								</CustomLinkComponent>
 							</li>
 							<li>
-								<a className="text-secondary text-decoration-none" href="/">
+								<CustomLinkComponent href="/" className="text-secondary text-decoration-none">
 									Random feature
-								</a>
+								</CustomLinkComponent>
 							</li>
 							<li>
-								<a className="text-secondary text-decoration-none" href="/">
+								<CustomLinkComponent href="/" className="text-secondary text-decoration-none">
 									Team feature
-								</a>
+								</CustomLinkComponent>
 							</li>
 							<li>
-								<a className="text-secondary text-decoration-none" href="/">
+								<CustomLinkComponent href="/" className="text-secondary text-decoration-none">
 									Stuff for developers
-								</a>
+								</CustomLinkComponent>
 							</li>
 							<li>
-								<a className="text-secondary text-decoration-none" href="/">
+								<CustomLinkComponent href="/" className="text-secondary text-decoration-none">
 									Another one
-								</a>
+								</CustomLinkComponent>
 							</li>
 							<li>
-								<a className="text-secondary text-decoration-none" href="/">
+								<CustomLinkComponent href="/" className="text-secondary text-decoration-none">
 									Last time
-								</a>
+								</CustomLinkComponent>
 							</li>
 						</ul>
 					</div>
@@ -56,24 +69,24 @@ const FooterComponent = () => {
 						<h5 className="text-white">Resources</h5>
 						<ul className="list-unstyled text-small mb-0">
 							<li>
-								<a className="text-secondary text-decoration-none" href="/">
+								<CustomLinkComponent href="/" className="text-secondary text-decoration-none">
 									Resource
-								</a>
+								</CustomLinkComponent>
 							</li>
 							<li>
-								<a className="text-secondary text-decoration-none" href="/">
+								<CustomLinkComponent href="/" className="text-secondary text-decoration-none">
 									Resource name
-								</a>
+								</CustomLinkComponent>
 							</li>
 							<li>
-								<a className="text-secondary text-decoration-none" href="/">
+								<CustomLinkComponent href="/" className="text-secondary text-decoration-none">
 									Another resource
-								</a>
+								</CustomLinkComponent>
 							</li>
 							<li>
-								<a className="text-secondary text-decoration-none" href="/">
+								<CustomLinkComponent href="/" className="text-secondary text-decoration-none">
 									Final resource
-								</a>
+								</CustomLinkComponent>
 							</li>
 						</ul>
 					</div>
@@ -81,19 +94,19 @@ const FooterComponent = () => {
 						<h5 className="text-white">About</h5>
 						<ul className="list-unstyled text-small mb-0">
 							<li>
-								<a className="text-secondary text-decoration-none" href="/">
+								<CustomLinkComponent href="/" className="text-secondary text-decoration-none">
 									Contact
-								</a>
+								</CustomLinkComponent>
 							</li>
 							<li>
-								<a className="text-secondary text-decoration-none" href="/">
+								<CustomLinkComponent href="/" className="text-secondary text-decoration-none">
 									Privacy
-								</a>
+								</CustomLinkComponent>
 							</li>
 							<li>
-								<a className="text-secondary text-decoration-none" href="/">
+								<CustomLinkComponent href="/" className="text-secondary text-decoration-none">
 									Terms
-								</a>
+								</CustomLinkComponent>
 							</li>
 						</ul>
 					</div>
