@@ -1,6 +1,8 @@
 import '@/styles/globals.scss';
 import '@/styles/github-markdown.css';
+import 'nprogress/nprogress.css';
 
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { DefaultSeo } from 'next-seo';
 import { SWRConfig } from 'swr';
@@ -10,6 +12,13 @@ import { removeCookie } from '@/common/utils/session';
 
 import SEO from '../../next-seo.config';
 
+const ProgressBar = dynamic(
+	() => {
+		return import('@/common/components/ProgressBar/components');
+	},
+	{ ssr: false }
+);
+
 console.log('%cThis is a demo site', 'font-size: 4rem; color: red; font-weight: 600;');
 
 function App({ Component, pageProps }) {
@@ -18,6 +27,7 @@ function App({ Component, pageProps }) {
 	return (
 		<>
 			<DefaultSeo {...SEO} />
+			<ProgressBar />
 			<SWRConfig
 				value={{
 					fetcher: fetcher,
