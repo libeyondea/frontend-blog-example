@@ -87,7 +87,3 @@ body {
 .sticky-top {
 	top: calc(#{$height-navbar} + 1.5rem) !important;
 }
-
-.wapper__card {
-	overflow-wrap: anywhere;
-}
