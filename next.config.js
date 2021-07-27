@@ -15,9 +15,9 @@ module.exports = (phase) => {
 		WEBSITE_URL: (() => {
 			if (isDev) return 'http://localhost:999';
 			if (isProd) {
-				return 'https://de4thzone.com';
+				return 'https://blog-example.vercel.app';
 			}
-			if (isStaging) return 'https://de4thzone.com';
+			if (isStaging) return 'https://blog-example.vercel.app';
 			return 'RESTURL_SPEAKERS:not (isDev,isProd && !isStaging,isProd && isStaging)';
 		})(),
 		API_URL: (() => {
