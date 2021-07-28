@@ -17,6 +17,9 @@ const CategoryComponent = ({ category, articlesCategory }) => {
 				title={category?.data?.title}
 				description={category?.data?.content}
 				canonical={`${process.env.WEBSITE_URL}/category/${category?.data?.slug}`}
+				openGraph={{
+					title: category.data.title
+				}}
 			/>
 			<LayoutComponent>
 				<main className="container-xl my-4">
