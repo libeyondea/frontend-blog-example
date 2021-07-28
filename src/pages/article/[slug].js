@@ -93,19 +93,21 @@ const ArticleComponent = ({ article, articlesRelated }) => {
 											</div>
 											<div className="my-3 my-sm-5">{article.data.content}</div>
 											<div className="d-flex justify-content-end align-items-center">
-												<div className="me-auto">
-													<span className="me-1">Tags:</span>
-													{article.data.tags.map((tag) => (
-														<CustomLinkComponent
-															key={tag.id}
-															href={`/tag/${tag.slug}`}
-															className="badge rounded-pill text-decoration-none text-secondary border me-1"
-														>
-															<span className="text-muted">#</span>
-															{tag.title}
-														</CustomLinkComponent>
-													))}
-												</div>
+												{!isEmpty(article?.data?.tags) && (
+													<div className="me-auto">
+														<span className="me-1">Tags:</span>
+														{article.data.tags.map((tag) => (
+															<CustomLinkComponent
+																key={tag.id}
+																href={`/tag/${tag.slug}`}
+																className="badge rounded-pill text-decoration-none text-secondary border me-1"
+															>
+																<span className="text-muted">#</span>
+																{tag.title}
+															</CustomLinkComponent>
+														))}
+													</div>
+												)}
 												<OverlayTrigger
 													trigger="click"
 													key="options-article"
