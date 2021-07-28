@@ -8,6 +8,7 @@ import useSWR from 'swr';
 import CustomImageComponent from '@/common/components/CustomImage/components';
 import CustomLinkComponent from '@/common/components/CustomLink/components';
 import CustomToggleComponent from '@/common/components/CustomToggle/components';
+import navbarMenu from '@/modules/layout/components/navbar/components/navbarMenu';
 
 const ResponsiveMenuComponent = ({ showResMenu, setShowResMenu }) => {
 	const handleClose = () => setShowResMenu(false);
@@ -72,7 +73,7 @@ const ResponsiveMenuComponent = ({ showResMenu, setShowResMenu }) => {
 						</CustomToggleComponent>
 						<Accordion.Collapse eventKey="1">
 							<>
-								{process.env.NAVBAR_MENU?.map((item, index) => (
+								{navbarMenu?.map((item, index) => (
 									<CustomLinkComponent href={item.href} className="dropdown-item p-2 ps-3" key={index}>
 										{item.name}
 									</CustomLinkComponent>
