@@ -19,8 +19,6 @@ const ProgressBar = dynamic(
 	{ ssr: false }
 );
 
-console.log('%cThis is a demo site', 'font-size: 4rem; color: red; font-weight: 600;');
-
 function App({ Component, pageProps }) {
 	const router = useRouter();
 
