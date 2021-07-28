@@ -17,6 +17,9 @@ const TagComponent = ({ tag, articlesTag }) => {
 				title={tag?.data?.title}
 				description={tag?.data?.content}
 				canonical={`${process.env.WEBSITE_URL}/tag/${tag?.data?.slug}`}
+				openGraph={{
+					title: tag.data.title
+				}}
 			/>
 			<LayoutComponent>
 				<main className="container-xl my-4">
