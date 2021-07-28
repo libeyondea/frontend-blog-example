@@ -34,6 +34,7 @@ const Home = ({ articlesPinned, articles }) => {
 													createdAt={article.created_at}
 													coverImage={article.image}
 													authorAvatar={article.user.avatar}
+													tags={article.tags}
 													minRead="6"
 													isExcerpt
 												/>
