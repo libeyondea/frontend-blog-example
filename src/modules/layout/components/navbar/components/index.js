@@ -3,6 +3,7 @@ import { BsList, BsSearch } from 'react-icons/bs';
 
 import CustomImageComponent from '@/common/components/CustomImage/components';
 import CustomLinkComponent from '@/common/components/CustomLink/components';
+import navbarMenu from '@/modules/layout/components/navbar/components/navbarMenu';
 import ResponsiveMenuComponent from '@/modules/layout/components/navbar/components/responsiveMenu/components';
 
 const NavbarComponent = () => {
@@ -25,7 +26,7 @@ const NavbarComponent = () => {
 						<span className="ms-2 fs-4 d-none d-sm-block fw-bolder">{process.env.SITE_NAME}</span>
 					</CustomLinkComponent>
 					<ul className="nav d-none d-md-flex ms-3">
-						{process.env.NAVBAR_MENU?.map((item, index) => (
+						{navbarMenu?.map((item, index) => (
 							<li className="nav-item" key={index}>
 								<CustomLinkComponent href={item.href} className="nav-link link-dark px-2">
 									{item.name}
