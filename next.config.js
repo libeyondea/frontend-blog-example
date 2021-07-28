@@ -34,25 +34,7 @@ module.exports = (phase) => {
 			TIMEOUT: 30000
 		},
 		LOGO_URL:
-			'https://elasticbeanstalk-ap-southeast-1-153036539674.s3.ap-southeast-1.amazonaws.com/images/6666666666.png',
-		NAVBAR_MENU: [
-			{
-				name: 'Home',
-				href: '/'
-			},
-			{
-				name: 'Contact',
-				href: '/'
-			},
-			{
-				name: 'FAQs',
-				href: '/'
-			},
-			{
-				name: 'About',
-				href: '/'
-			}
-		]
+			'https://elasticbeanstalk-ap-southeast-1-153036539674.s3.ap-southeast-1.amazonaws.com/images/6666666666.png'
 	};
 	return {
 		env,
