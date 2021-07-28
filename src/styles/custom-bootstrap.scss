@@ -24,6 +24,15 @@ $dropdown-link-hover-bg: $gray-300;
 $dropdown-link-active-color: shade-color($gray-900, 10%);
 $dropdown-link-active-bg: $gray-300;
 
+$pagination-color: $dark;
+$pagination-hover-color: $dark;
+
+$pagination-focus-color: $dark;
+$pagination-focus-box-shadow: none;
+
+$pagination-active-bg: $dark;
+$pagination-active-border-color: $dark;
+
 // Layout & components
 @import '~bootstrap/scss/root';
 @import '~bootstrap/scss/reboot';
