@@ -4,6 +4,7 @@ import React from 'react';
 import ArticleCardComponent from '@/common/components/ArticleCard/components';
 import BoxCardComponent from '@/common/components/BoxCard/components';
 import PaginationComponent from '@/common/components/Pagination/components';
+import Meta from '@/common/meta/Meta';
 import httpRequest from '@/common/utils/httpRequest';
 import pageNumber from '@/common/utils/pageNumber';
 import LayoutComponent from '@/modules/layout/components';
@@ -12,6 +13,7 @@ import SidebarComponent from '@/modules/sidebar/components';
 const Home = ({ articlesPinned, articles }) => {
 	return (
 		<>
+			<Meta />
 			<LayoutComponent>
 				<main className="container-xl my-4">
 					<div className="row">
