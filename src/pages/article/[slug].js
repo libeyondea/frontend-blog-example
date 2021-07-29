@@ -1,5 +1,4 @@
 import { isEmpty } from 'lodash';
-import { NextSeo } from 'next-seo';
 import React from 'react';
 import { OverlayTrigger, Popover } from 'react-bootstrap';
 import { FaEllipsisH, FaFacebookF, FaTwitter } from 'react-icons/fa';
@@ -7,6 +6,7 @@ import { FaEllipsisH, FaFacebookF, FaTwitter } from 'react-icons/fa';
 import ArticleCardComponent from '@/common/components/ArticleCard/components';
 import CustomImageComponent from '@/common/components/CustomImage/components';
 import CustomLinkComponent from '@/common/components/CustomLink/components';
+import Meta from '@/common/meta/Meta';
 import httpRequest from '@/common/utils/httpRequest';
 import timeFormat from '@/common/utils/timeFormat';
 import LayoutComponent from '@/modules/layout/components';
@@ -15,7 +15,7 @@ import SidebarComponent from '@/modules/sidebar/components';
 const ArticleComponent = ({ article, articlesRelated }) => {
 	return (
 		<>
-			<NextSeo
+			<Meta
 				title={article.data.title}
 				description={article.data.excerpt}
 				canonical={`${process.env.WEBSITE_URL}/article/${article.data.slug}`}
