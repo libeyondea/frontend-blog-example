@@ -1,10 +1,10 @@
 import { isEmpty } from 'lodash';
-import { NextSeo } from 'next-seo';
 import React from 'react';
 
 import ArticleCardComponent from '@/common/components/ArticleCard/components';
 import BoxCardComponent from '@/common/components/BoxCard/components';
 import PaginationComponent from '@/common/components/Pagination/components';
+import Meta from '@/common/meta/Meta';
 import httpRequest from '@/common/utils/httpRequest';
 import pageNumber from '@/common/utils/pageNumber';
 import LayoutComponent from '@/modules/layout/components';
@@ -13,7 +13,7 @@ import SidebarComponent from '@/modules/sidebar/components';
 const CategoryComponent = ({ category, articlesCategory }) => {
 	return (
 		<>
-			<NextSeo
+			<Meta
 				title={category?.data?.title}
 				description={category?.data?.content}
 				canonical={`${process.env.WEBSITE_URL}/category/${category?.data?.slug}`}
