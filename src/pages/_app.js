@@ -4,13 +4,10 @@ import 'nprogress/nprogress.css';
 
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-import { DefaultSeo } from 'next-seo';
 import { SWRConfig } from 'swr';
 
 import fetcher from '@/common/utils/fetcher';
 import { removeCookie } from '@/common/utils/session';
-
-import SEO from '../../next-seo.config';
 
 const ProgressBar = dynamic(
 	() => {
@@ -24,7 +21,6 @@ function App({ Component, pageProps }) {
 
 	return (
 		<>
-			<DefaultSeo {...SEO} />
 			<ProgressBar />
 			<SWRConfig
 				value={{
