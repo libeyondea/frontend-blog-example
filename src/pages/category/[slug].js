@@ -10,7 +10,7 @@ import pageNumber from '@/common/utils/pageNumber';
 import LayoutComponent from '@/modules/layout/components';
 import SidebarComponent from '@/modules/sidebar/components';
 
-const CategoryComponent = ({ category, articlesCategory }) => {
+const Category = ({ category, articlesCategory }) => {
 	return (
 		<>
 			<Meta
@@ -113,4 +113,4 @@ export async function getServerSideProps({ query }) {
 	}
 }
 
-export default CategoryComponent;
+export default Category;

@@ -10,7 +10,7 @@ import pageNumber from '@/common/utils/pageNumber';
 import LayoutComponent from '@/modules/layout/components';
 import SidebarComponent from '@/modules/sidebar/components';
 
-const TagComponent = ({ tag, articlesTag }) => {
+const Tag = ({ tag, articlesTag }) => {
 	return (
 		<>
 			<Meta
@@ -113,4 +113,4 @@ export async function getServerSideProps({ query }) {
 	}
 }
 
-export default TagComponent;
+export default Tag;

@@ -45,7 +45,7 @@ const NavbarComponent = () => {
 					</form>
 					<button
 						type="button"
-						className="d-md-none d-flex align-items-center border-0 bg-transparent fs-1 p-0  ms-auto"
+						className="d-md-none d-flex align-items-center border-0 bg-transparent fs-1 p-0 ms-auto"
 						onClick={handleShow}
 					>
 						<BsList />

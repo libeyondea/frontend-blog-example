@@ -12,7 +12,7 @@ import timeFormat from '@/common/utils/timeFormat';
 import LayoutComponent from '@/modules/layout/components';
 import SidebarComponent from '@/modules/sidebar/components';
 
-const ArticleComponent = ({ article, articlesRelated }) => {
+const Article = ({ article, articlesRelated }) => {
 	return (
 		<>
 			<Meta
@@ -224,4 +224,4 @@ export async function getServerSideProps({ query }) {
 	}
 }
 
-export default ArticleComponent;
+export default Article;
