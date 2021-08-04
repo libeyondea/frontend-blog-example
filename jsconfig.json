@@ -8,6 +8,9 @@
             "@/modules/*": [
                 "./src/modules/*"
             ],
+            "@/layouts/*": [
+                "./src/layouts/*"
+            ],
             "@/styles/*": [
                 "./src/styles/*"
             ],
