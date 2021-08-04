@@ -11,7 +11,7 @@ const TagA = forwardRef(({ className, href, onClick, children, ...props }, ref) 
 
 TagA.displayName = 'TagA';
 
-const CustomLinkComponent = ({ className, href, as, onClick, children, ...props }) => (
+const CustomLink = ({ className, href, as, onClick, children, ...props }) => (
 	<Link href={href} as={as} passHref>
 		<TagA className={className} href={href} onClick={onClick} {...props}>
 			{children}
@@ -19,4 +19,4 @@ const CustomLinkComponent = ({ className, href, as, onClick, children, ...props 
 	</Link>
 );
 
-export default CustomLinkComponent;
+export default CustomLink;
