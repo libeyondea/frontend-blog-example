@@ -11,7 +11,7 @@ import { removeCookie } from '@/common/utils/session';
 
 const ProgressBar = dynamic(
 	() => {
-		return import('@/common/components/ProgressBar/components');
+		return import('@/common/components/ProgressBar');
 	},
 	{ ssr: false }
 );
