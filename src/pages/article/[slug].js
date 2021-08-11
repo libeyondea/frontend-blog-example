@@ -1,3 +1,4 @@
+import MDEditor from '@uiw/react-md-editor';
 import { isEmpty } from 'lodash';
 import React from 'react';
 import { OverlayTrigger, Popover } from 'react-bootstrap';
@@ -34,8 +35,8 @@ const Article = ({ article, articlesRelated }) => {
 			<MainLayout>
 				<div className="row">
 					<div className="col-12 mb-4">
-						<article className="">
-							<div>
+						<article>
+							{article.data.image && (
 								<CustomImage
 									src={article.data.image}
 									className="rounded-3"
@@ -45,7 +46,7 @@ const Article = ({ article, articlesRelated }) => {
 									height={200}
 									isBlur
 								/>
-							</div>
+							)}
 							<div className="py-3 py-sm-4 border-bottom">
 								<div className="mb-3">
 									<h1>{article.data.title}</h1>
@@ -86,7 +87,9 @@ const Article = ({ article, articlesRelated }) => {
 										</span>
 									</div>
 								</div>
-								<div className="my-3 my-sm-5">{article.data.content}</div>
+								<div className="my-3 my-sm-5">
+									<MDEditor.Markdown source={article.data.content} />
+								</div>
 								<div className="d-flex justify-content-end align-items-center">
 									{!isEmpty(article?.data?.tags) && (
 										<div className="me-auto">

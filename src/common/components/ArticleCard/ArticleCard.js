@@ -5,7 +5,7 @@ import CustomImage from '@/common/components/CustomImage';
 import CustomLink from '@/common/components/CustomLink';
 import timeAgo from '@/common/utils/timeAgo';
 
-const ArticleCardComponent = ({
+const ArticleCard = ({
 	title,
 	slug,
 	excerpt,
@@ -24,14 +24,23 @@ const ArticleCardComponent = ({
 		<div className="card border overflow-hidden position-relative rounded-0 border-0">
 			<div className="row g-0">
 				<div className={`${isVertical ? 'col-12' : 'col-3'}`}>
-					<CustomImage className="rounded-3" src={coverImage} width={666} height={444} alt={title} />
+					{coverImage && <CustomImage className="rounded-3" src={coverImage} width={666} height={444} alt={title} />}
 				</div>
 				<div className={`${isVertical ? 'col-12' : 'col-9 ps-2 ps-sm-3'}`}>
 					<div className="card-body position-static p-0">
 						<div className="d-flex align-items-center mb-3">
 							<div className="me-1">
 								<CustomLink href={`/`} className="text-decoration-none d-inline-block d-flex align-items-center">
-									<CustomImage src={authorAvatar} className="rounded-circle" width={22} height={22} alt={author} layout="fixed" />
+									{authorAvatar && (
+										<CustomImage
+											src={authorAvatar}
+											className="rounded-circle"
+											width={22}
+											height={22}
+											alt={author}
+											layout="fixed"
+										/>
+									)}
 								</CustomLink>
 							</div>
 							<div className="lh-1">
@@ -79,4 +88,4 @@ const ArticleCardComponent = ({
 	);
 };
 
-export default ArticleCardComponent;
+export default ArticleCard;

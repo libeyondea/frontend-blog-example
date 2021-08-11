@@ -1,6 +1,7 @@
 import '@/styles/globals.scss';
 import '@/styles/github-markdown.css';
 import 'nprogress/nprogress.css';
+import '@uiw/react-markdown-preview/dist/markdown.css';
 
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';

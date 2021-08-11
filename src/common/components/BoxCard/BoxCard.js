@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BoxCardComponent = ({ children }) => {
+const BoxCard = ({ children }) => {
 	return (
 		<div className="p-0 text-center">
 			<span className="h5 mb-0">{children}</span>
@@ -8,4 +8,4 @@ const BoxCardComponent = ({ children }) => {
 	);
 };
 
-export default BoxCardComponent;
+export default BoxCard;
