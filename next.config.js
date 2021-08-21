@@ -34,13 +34,14 @@ module.exports = (phase) => {
 		REQUEST: {
 			TIMEOUT: 30000
 		},
-		LOGO_URL: 'https://elasticbeanstalk-ap-southeast-1-153036539674.s3.ap-southeast-1.amazonaws.com/images/6666666666.png'
+		LOGO_URL: '/6666666666.png'
 	};
 	return removeImports({
 		env,
 		reactStrictMode: true,
 		images: {
 			domains: [
+				'localhost',
 				'backend-blog-example.herokuapp.com',
 				'elasticbeanstalk-ap-southeast-1-153036539674.s3.ap-southeast-1.amazonaws.com',
 				'de4thzone.s3.ap-southeast-1.amazonaws.com'
