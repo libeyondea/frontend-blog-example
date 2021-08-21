@@ -34,7 +34,7 @@ module.exports = (phase) => {
 		REQUEST: {
 			TIMEOUT: 30000
 		},
-		LOGO_URL: '/6666666666.png'
+		LOGO_URL: '/images/6666666666.png'
 	};
 	return removeImports({
 		env,
