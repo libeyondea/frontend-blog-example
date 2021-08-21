@@ -51,15 +51,20 @@ const Article = ({ article, articlesRelated }) => {
 								<div className="mb-3">
 									<h1>{article.data.title}</h1>
 								</div>
-								<div className="mb-3">
-									<span className="me-1">Category:</span>
-									<CustomLink
-										href={`/category/${article.data.category.slug}`}
-										className="badge rounded-pill bg-secondary text-decoration-none text-white"
-									>
-										{article.data.category.title}
-									</CustomLink>
-								</div>
+								{!isEmpty(article?.data?.tags) && (
+									<div className="mb-3">
+										<span className="me-1">Categories:</span>
+										{article.data.categories.map((category) => (
+											<CustomLink
+												key={category.id}
+												href={`/category/${category.slug}`}
+												className="badge rounded-pill text-decoration-none bg-secondary text-white border me-1"
+											>
+												{category.title}
+											</CustomLink>
+										))}
+									</div>
+								)}
 								<div className="mb-3">
 									<div className="d-flex justify-content-start align-items-center flex-wrap">
 										<CustomLink
@@ -162,8 +167,6 @@ const Article = ({ article, articlesRelated }) => {
 												title={article.title}
 												slug={article.slug}
 												excerpt={article.excerpt}
-												categoryTitle={article.category.title}
-												categorySlug={article.category.slug}
 												author={article.user.full_name}
 												createdAt={article.created_at}
 												coverImage={article.image}
