@@ -10,8 +10,6 @@ const ArticleCard = ({
 	slug,
 	excerpt,
 	coverImage,
-	categoryTitle,
-	categorySlug,
 	author,
 	authorAvatar,
 	tags,
@@ -72,13 +70,13 @@ const ArticleCard = ({
 						<div className="d-flex align-items-center small mt-2">
 							<span className="text-muted">{timeAgo(createdAt)}</span>
 							<span className="text-muted mx-2">·</span>
-							<CustomLink
+							{/* <CustomLink
 								href={`/category/${categorySlug}`}
 								className="badge rounded-pill bg-secondary text-decoration-none text-white"
 							>
 								{categoryTitle}
 							</CustomLink>
-							<span className="text-muted mx-2">·</span>
+							<span className="text-muted mx-2">·</span> */}
 							<span className="text-muted">{minRead} mins</span>
 						</div>
 					</div>
