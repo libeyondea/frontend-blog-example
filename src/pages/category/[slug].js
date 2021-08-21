@@ -45,8 +45,6 @@ const Category = ({ category, articlesCategory }) => {
 										title={article.title}
 										slug={article.slug}
 										excerpt={article.excerpt}
-										categoryTitle={article.category.title}
-										categorySlug={article.category.slug}
 										author={article.user.full_name}
 										createdAt={article.created_at}
 										coverImage={article.image}
