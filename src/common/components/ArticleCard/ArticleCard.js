@@ -21,10 +21,10 @@ const ArticleCard = ({
 	return (
 		<div className="card border overflow-hidden position-relative rounded-0 border-0">
 			<div className="row g-0">
-				<div className={`${isVertical ? 'col-12' : 'col-3'}`}>
-					{coverImage && <CustomImage className="rounded-3" src={coverImage} width={666} height={444} alt={title} />}
+				<div className={`${isVertical ? 'col-12' : 'col-12 col-sm-3'}`}>
+					{coverImage && <CustomImage className="rounded-3" src={coverImage} width={600} height={400} alt={title} />}
 				</div>
-				<div className={`${isVertical ? 'col-12' : 'col-9 ps-2 ps-sm-3'}`}>
+				<div className={`${isVertical ? 'col-12' : 'col-12 col-sm-9 ps-0 ps-sm-3'}`}>
 					<div className="card-body position-static p-0">
 						<div className="d-flex align-items-center mb-3">
 							<div className="me-1">
