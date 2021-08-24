@@ -56,7 +56,11 @@ const Category = ({ category, articlesCategory }) => {
 								</div>
 							))}
 						</div>
-						<Pagination total={articlesCategory?.meta?.total} limit={process.env.LIMIT_PAGE.ARTICLES} classNameContainer="mt-4" />
+						<Pagination
+							total={articlesCategory?.pagination?.total}
+							limit={process.env.LIMIT_PAGE.ARTICLES}
+							classNameContainer="mt-4"
+						/>
 					</>
 				)}
 			</MainLayout>

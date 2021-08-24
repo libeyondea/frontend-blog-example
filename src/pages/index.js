@@ -43,7 +43,7 @@ const Home = ({ articles }) => {
 								</div>
 							))}
 						</div>
-						<Pagination total={articles?.meta?.total} limit={process.env.LIMIT_PAGE.ARTICLES} classNameContainer="mt-4" />
+						<Pagination total={articles?.pagination?.total} limit={process.env.LIMIT_PAGE.ARTICLES} classNameContainer="mt-4" />
 					</>
 				)}
 			</MainLayout>

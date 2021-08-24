@@ -56,7 +56,11 @@ const Tag = ({ tag, articlesTag }) => {
 								</div>
 							))}
 						</div>
-						<Pagination total={articlesTag?.meta?.total} limit={process.env.LIMIT_PAGE.ARTICLES} classNameContainer="mt-4" />
+						<Pagination
+							total={articlesTag?.pagination?.total}
+							limit={process.env.LIMIT_PAGE.ARTICLES}
+							classNameContainer="mt-4"
+						/>
 					</>
 				)}
 			</MainLayout>
